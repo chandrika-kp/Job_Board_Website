@@ -26,3 +26,4 @@ app.listen(9000, () =>{
 })
 -------------------------------------------------------------
 now run localhost:9000
+![Screenshot 2023-10-16 162607](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/10ebd795-76e2-4a46-a686-3b64b2222211)
