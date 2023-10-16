@@ -11,6 +11,9 @@ In package.json, the given file name is as
 
    2) To run the script,
       "start server": "node server",
+
+      ![Screenshot 2023-10-16 163613](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/91e39d9f-46e8-4181-88ca-a692350281bd)
+
 --------------------------------------------------------------
 server.js file
 
@@ -26,6 +29,7 @@ app.listen(9000, () =>{
 })
 -------------------------------------------------------------
 now run localhost:9000
-![Screenshot 2023-10-16 162607](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/10ebd795-76e2-4a46-a686-3b64b2222211)
-![Screenshot 2023-10-16 162607](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/64e7c3f7-db0c-4cf2-9a2e-ee425650c565)
+
+![Screenshot 2023-10-16 162607](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/182db51d-5c2d-40dc-8840-cc90050f3c8a)
+
 
