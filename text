@@ -1,0 +1,28 @@
+To run the server,
+I created a Backend Folder,
+
+To install node packages
+
+   npm init -y
+   npm i express
+
+In package.json, the given file name is as
+   1)  "main": "server.js"
+
+   2) To run the script,
+      "start server": "node server",
+--------------------------------------------------------------
+server.js file
+
+const express = require("express");
+const app = express();
+
+app.get('/', (req,res) =>  {
+    res.send("hello .... local server")
+})
+
+app.listen(9000, () =>{
+    console.log("server running at port 9000...")
+})
+-------------------------------------------------------------
+now run localhost:9000
