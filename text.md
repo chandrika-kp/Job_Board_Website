@@ -40,10 +40,12 @@ instead of running sever for every change in the application, we can install nod
          npm i nodemon -D
 
 In package.json, 
-     1) To run the script, in scripts
+     1) change in scripts
          "start server": "node server",
-         "dev" : "nodemon server",
-      
+         "dev": "nodemon server",
+     2) To run the script,
+         npm run dev
+ ![image](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/62503393-ceb2-42de-988a-8f114fc8eccb)
+     
 
-         
 
