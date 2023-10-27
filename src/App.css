@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.carousel-item img {
+  height: 30rem; 
+  object-fit: cover; /* This property ensures that the image covers the entire container */
+}
