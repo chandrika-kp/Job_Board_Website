@@ -34,7 +34,7 @@ const Login = () => {
                 </div>
             </div> */}
             <p>
-            This is login page
+            This is login pagefjhgjdgkj
 
             </p>
             <NavLink to="/signUp">signup</NavLink>
