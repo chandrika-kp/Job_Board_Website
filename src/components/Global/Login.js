@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Login = () => {
     return (
         <>
-        {/* <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal">
                 Login
             </button>
             <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,10 +32,9 @@ const Login = () => {
 
                     </div>
                 </div>
-            </div> */}
+            </div>
             <p>
-            This is login pagefjhgjdgkj
-
+            This is login page
             </p>
             <NavLink to="/signUp">signup</NavLink>
         </>
