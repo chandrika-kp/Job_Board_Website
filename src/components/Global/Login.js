@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -33,6 +34,7 @@ const Login = () => {
                 </div>
             </div> */}
             This is login page
+            <NavLink to="/signUp">signup</NavLink>
         </>
     )
 }

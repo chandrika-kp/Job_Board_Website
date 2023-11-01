@@ -48,4 +48,5 @@ In package.json,
  ![image](https://github.com/chandrika-kp/Job_Board_Website/assets/102351627/62503393-ceb2-42de-988a-8f114fc8eccb)
      
 
-
+-----------------------------------------------------
+Note : Don't forgot to connect mongodb via mongodb compass or vs.code or mongo Atlas
