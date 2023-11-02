@@ -32,7 +32,7 @@ export const Navbar = () => {
                                     <NavLink className="nav-link active" aria-current="page" to="/login">Login</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="/signUp">SignUp</NavLink>
+                                    <NavLink className="nav-link" to="/employer">Employer</NavLink>
                                 </li>
                             </ul>
                         </div>
