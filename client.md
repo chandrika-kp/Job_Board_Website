@@ -14,4 +14,3 @@ npm i redux react-redux
 
 npm i axios
 
-6)
