@@ -5,6 +5,7 @@ import { Home } from './components/Global/Home';
 import SignUp from './components/Global/SignUp';
 import Login from './components/Global/Login';
 import Employee from './components/Employer/Employee';
+import { NotFound } from './components/pages/NotFound';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signUp" element={<SignUp/>} />
-          <Route path="/employer" element={<Employee/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/employer" element={<Employee />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
