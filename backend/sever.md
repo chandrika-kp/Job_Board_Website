@@ -65,4 +65,5 @@ npm install cors
 In your server.js require cors.
 
 const cors = require('cors')
+
 app.use(cors())
