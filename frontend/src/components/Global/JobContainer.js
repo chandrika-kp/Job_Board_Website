@@ -8,49 +8,66 @@ export const JobContainer = () => {
   const dispatch = useDispatch();
   const jobs = useSelector((state) => state.jobsList);
   const [selectedTitle, setSelectedTitle] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('');
 
   useEffect(() => {
     dispatch(fetchJobs())
   }, [dispatch]);
 
-  const jobTitles = [...new Set(jobs.map((job) => job.title))];
+  const jobTitles = [...new Set(jobs.map((job) => job.title))].sort();
   console.log(jobTitles)
 
-  const displayLess = jobs.slice(0, 5);
+  const jobLocation = [...new Set(jobs.map((job) => job.location))].sort();
+  console.log(jobLocation)
+
+  const displayLess = jobs.slice(0, 15);
   console.log(displayLess)
 
-  const filteredJobs = selectedTitle
-  ? displayLess.filter((job) => job.title === selectedTitle)
-  : displayLess;
-
+  const filteredJobs = displayLess.filter((job) => 
+  (selectedTitle ? job.title === selectedTitle :true) &&
+  (selectedLocation ? job.location === selectedLocation :true) 
+  );
 
   return (
     <div className="container">
       <div className='sideBlock'>
         <h3 className='text-center'>Filter</h3>
         <p>Select Job Type:</p>
-        <select onChange={e=>setSelectedTitle(e.target.value)}>
+        <select style={{width:'85%'}} onChange={e => setSelectedTitle(e.target.value)}>
           <option value="">All</option>
           {jobTitles.map((title) => (
             <option key={title} value={title}>{title}</option>
           ))}
         </select>
+
+        <p>Select Job Type:</p>
+        <select style={{width:'85%'}} onChange={e => setSelectedLocation(e.target.value)}>
+          <option value="">All</option>
+          {jobLocation.map((location) => (
+            <option key={location} value={location}>{location}</option>
+          ))}
+        </select>
+
       </div>
       <div className='jobCardBlock'>
         <h1 className='text-center'>Job Openings</h1>
-        {filteredJobs.map((job) => {
-          return (
-            <React.Fragment key={job._id}>
-              <div className="eachJob">
-                <h3 className="jobTitle">{job.title}</h3>
-                <p>{job.company}</p>
-              </div>
-              <div className="col-md-4 mb-4">
-              </div>
-            </React.Fragment>
-          )
+        {
+          filteredJobs.length === 0
+            ? <p className='NoMatch text-center fs-3 m-1'>No jobs found</p>
+            : (filteredJobs.map((job) => {
+              return (
+                <React.Fragment key={job._id}>
+                  <div className="eachJob">
+                    <h3 className="jobTitle">{job.title}</h3>
+                    <p>{job.company}</p>
+                  </div>
+                  <div className="col-md-4 mb-4">
+                  </div>
+                </React.Fragment>
+              )
+            })
+            )
         }
-        )}
       </div>
     </div>
   )
