@@ -2,6 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
+const cors = require('cors')
+
+app.use(cors())
 
 // database connection
 const uri = "mongodb://127.0.0.1:27017/JobBoard"
@@ -35,7 +38,8 @@ app.get('/jobs', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
