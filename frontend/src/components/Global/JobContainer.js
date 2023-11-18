@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchJobs } from '../../Redux/Actions/action';
+import { NavLink } from 'react-router-dom';
 
 export const JobContainer = () => {
 
@@ -23,9 +24,9 @@ export const JobContainer = () => {
   const displayLess = jobs.slice(0, 15);
   console.log(displayLess)
 
-  const filteredJobs = displayLess.filter((job) => 
-  (selectedTitle ? job.title === selectedTitle :true) &&
-  (selectedLocation ? job.location === selectedLocation :true) 
+  const filteredJobs = displayLess.filter((job) =>
+    (selectedTitle ? job.title === selectedTitle : true) &&
+    (selectedLocation ? job.location === selectedLocation : true)
   );
 
   return (
@@ -33,7 +34,7 @@ export const JobContainer = () => {
       <div className='sideBlock'>
         <h3 className='text-center'>Filter</h3>
         <p>Select Job Type:</p>
-        <select style={{width:'85%'}} onChange={e => setSelectedTitle(e.target.value)}>
+        <select style={{ width: '85%' }} onChange={e => setSelectedTitle(e.target.value)}>
           <option value="">All</option>
           {jobTitles.map((title) => (
             <option key={title} value={title}>{title}</option>
@@ -41,7 +42,7 @@ export const JobContainer = () => {
         </select>
 
         <p>Select Job Type:</p>
-        <select style={{width:'85%'}} onChange={e => setSelectedLocation(e.target.value)}>
+        <select style={{ width: '85%' }} onChange={e => setSelectedLocation(e.target.value)}>
           <option value="">All</option>
           {jobLocation.map((location) => (
             <option key={location} value={location}>{location}</option>
@@ -60,6 +61,9 @@ export const JobContainer = () => {
                   <div className="eachJob">
                     <h3 className="jobTitle">{job.title}</h3>
                     <p>{job.company}</p>
+                    <p>{job.about}</p>
+                    <p>Salary : {job.salary}</p>
+                    <p>No of openings : {job.openings}</p>
                   </div>
                   <div className="col-md-4 mb-4">
                   </div>
@@ -68,6 +72,11 @@ export const JobContainer = () => {
             })
             )
         }
+
+        <NavLink className="nav-link active text-end fs-3" type='button' onClick={() => alert('Please Login')} to="/login"> + more jobs</NavLink>
+
+
+
       </div>
     </div>
   )

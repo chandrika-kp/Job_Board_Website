@@ -98,7 +98,6 @@
   .container {
     flex-direction: column;
     align-items: center;
-    /* or any other alignment suitable for small screens */
   }
 
   .sideBlock,
